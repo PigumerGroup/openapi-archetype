@@ -1,0 +1,21 @@
+<archetype-descriptor
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0
+        https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        name="${artifactId}">
+    <requiredProperties>
+        <requiredProperty key="serviceId"/>
+    </requiredProperties>
+    <fileSets>
+        <fileSet filtered="true">
+            <directory>services</directory>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>spec</directory>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory></directory>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>

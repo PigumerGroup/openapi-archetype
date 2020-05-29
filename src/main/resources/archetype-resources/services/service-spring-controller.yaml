@@ -1,0 +1,4 @@
+"!include": service-spring.yaml
+outputDir: out/spring-controller
+additionalProperties:
+  artifactId: ${serviceId}-service-controller
