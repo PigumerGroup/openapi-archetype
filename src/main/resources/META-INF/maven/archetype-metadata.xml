@@ -9,13 +9,12 @@
     </requiredProperties>
     <fileSets>
         <fileSet filtered="true">
-            <directory>services</directory>
-        </fileSet>
-        <fileSet filtered="true">
-            <directory>spec</directory>
-        </fileSet>
-        <fileSet filtered="true">
             <directory></directory>
+            <includes>
+                <include>*</include>
+                <include>spec/*</include>
+                <include>services/*</include>
+            </includes>
         </fileSet>
     </fileSets>
 </archetype-descriptor>
