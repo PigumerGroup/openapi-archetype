@@ -5,7 +5,7 @@ Project creation
 
 ```
 $ mvn archetype:generate \
-         -DarchetypeGroupId=com.pigumer \
+         -DarchetypeGroupId=com.pigumer.tools.archetype \
          -DarchetypeArtifactId=openapi-archetype \
          -DarchetypeVersion=0.1.0-SNAPSHOT \
          -DgroupId=com.pigumer.example-service \
