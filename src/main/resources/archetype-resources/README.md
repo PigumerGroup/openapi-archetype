@@ -1,7 +1,10 @@
+Usage
+=====
 
 ```
 $ docker-compose up
-$ mvn clean install
+$ docker-compose down
+$ mvn -DaltDeploymentRepository=<Repository Id>::default::<Repository Url> clean deploy 
 $ cd out/angular
 $ npm install -g @angular/cli
 $ npm install

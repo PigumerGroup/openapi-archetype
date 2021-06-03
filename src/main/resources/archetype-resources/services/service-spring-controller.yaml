@@ -1,4 +1,13 @@
-"!include": service-spring.yaml
+inputSpec: spec/service.yaml
+generatorName: spring
 outputDir: out/spring-controller
 additionalProperties:
+  modelPackage: ${package}.controller.model
+  apiPackage: ${package}.controller.api
+  invokerPackage: ${package}.controller.api
+  groupId: ${groupId}
+  dateLibrary: java8
+  java8: true
+  configPackage: ${package}.controller.configuration
+  library: spring-boot
   artifactId: ${serviceId}-service-controller
