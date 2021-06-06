@@ -4,7 +4,7 @@
 
     <groupId>com.pigumer.tools.archetype</groupId>
     <artifactId>openapi-archetype</artifactId>
-    <version>0.1.4</version>
+    <version>0.1.5</version>
     <packaging>maven-archetype</packaging>
 
     <name>openapi-archetype</name>
@@ -58,9 +58,9 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/PigumerGroup/openapi-archetype</url>
+            <id>ossrh</id>
+            <name>Central Repository OSSRH</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 </project>
