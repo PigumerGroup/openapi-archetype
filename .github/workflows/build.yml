@@ -1,11 +1,15 @@
 name: Java CI
 
-on: [push]
+on:
+  release:
+    types: [created]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -14,4 +18,6 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots verify
+        run: mvn --batch-mode deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
