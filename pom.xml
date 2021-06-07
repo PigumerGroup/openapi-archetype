@@ -4,12 +4,19 @@
 
     <groupId>com.pigumer.tools.archetype</groupId>
     <artifactId>openapi-archetype</artifactId>
-    <version>0.1.11</version>
+    <version>0.1.12</version>
     <packaging>maven-archetype</packaging>
 
     <name>openapi-archetype</name>
     <description>Create code generator project used openapi generator.</description>
     <url>https://github.com/PigumerGroup/openapi-archetype</url>
+
+    <developers>
+        <developer>
+            <name>Shigeki Shoji</name>
+            <email>takesection@gmail.com</email>
+        </developer>
+    </developers>
 
     <licenses>
         <license>
