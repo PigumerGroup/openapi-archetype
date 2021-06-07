@@ -4,7 +4,7 @@
 
     <groupId>com.pigumer.tools.archetype</groupId>
     <artifactId>openapi-archetype</artifactId>
-    <version>0.1.7</version>
+    <version>0.1.8</version>
     <packaging>maven-archetype</packaging>
 
     <name>openapi-archetype</name>
@@ -42,12 +42,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-gpg-plugin</artifactId>
                     <version>1.6</version>
-                    <configuration>
-                        <gpgArguments>
-                            <argument>--pinentry-mode</argument>
-                            <argument>loopback</argument>
-                        </gpgArguments>
-                    </configuration>
                     <executions>
                         <execution>
                             <id>sign-artifacts</id>
