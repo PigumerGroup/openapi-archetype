@@ -1,9 +1,0 @@
-inputSpec: spec/service.yaml
-outputDir: out/angular
-generatorName: typescript-angular
-additionalProperties:
-  supportsES6: true
-  modelPropertyNaming: original
-  apiModulePrefix: ${serviceId}
-  fileNaming: kebab-case
-  npmName: ${serviceId}

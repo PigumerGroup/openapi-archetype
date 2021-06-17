@@ -1,6 +1,6 @@
 openapi: 3.0.2
 info:
-  version: 0.1.0-SNAPSHOT
+  version: 0.1.0
   title: ${serviceId}-service
 servers:
   - url: 'http://localhost:8080/${serviceId}'

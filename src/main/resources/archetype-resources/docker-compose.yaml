@@ -4,5 +4,5 @@ services:
     image: openapitools/openapi-generator-cli
     volumes:
       - .:/work
-    command: bash -c "chmod +x buildscript; ./buildscript"
+    command: bash -c "chmod +x build.sh; ./build.sh"
     working_dir: /work

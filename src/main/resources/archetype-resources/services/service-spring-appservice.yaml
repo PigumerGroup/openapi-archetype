@@ -12,3 +12,4 @@ additionalProperties:
   library: spring-boot
   artifactId: ${serviceId}-service-appservice
   interfaceOnly: true
+  snapshotVersion: true

@@ -11,3 +11,4 @@ additionalProperties:
   configPackage: ${package}.controller.configuration
   library: spring-boot
   artifactId: ${serviceId}-service-controller
+  snapshotVersion: true
