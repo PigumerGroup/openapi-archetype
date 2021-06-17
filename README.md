@@ -1,4 +1,4 @@
-![build workflow](https://github.com/github/docs/actions/workflows/build.yml/badge.svg)
+![build workflow](https://github.com/PigumerGroup/openapi-archetype/actions/workflows/build.yml/badge.svg)
 
 Project creation
 ================
