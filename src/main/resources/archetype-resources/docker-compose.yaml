@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   generator:
-    image: openapitools/openapi-generator-cli
+    image: maven
     volumes:
       - .:/work
     command: bash -c "chmod +x build.sh; ./build.sh"

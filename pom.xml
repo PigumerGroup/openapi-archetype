@@ -4,7 +4,7 @@
 
     <groupId>com.pigumer.tools.archetype</groupId>
     <artifactId>openapi-archetype</artifactId>
-    <version>0.1.14</version>
+    <version>0.1.15</version>
     <packaging>maven-archetype</packaging>
 
     <name>openapi-archetype</name>
