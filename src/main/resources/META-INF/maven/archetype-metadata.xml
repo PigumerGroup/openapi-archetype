@@ -8,12 +8,16 @@
         <requiredProperty key="serviceId"/>
     </requiredProperties>
     <fileSets>
+        <fileSet filtered="true" packaged="true">
+            <directory>example/src/main/java</directory>
+        </fileSet>
         <fileSet filtered="true">
             <directory></directory>
             <includes>
                 <include>*</include>
                 <include>spec/*</include>
                 <include>services/*</include>
+                <include>example/*</include>
             </includes>
         </fileSet>
     </fileSets>

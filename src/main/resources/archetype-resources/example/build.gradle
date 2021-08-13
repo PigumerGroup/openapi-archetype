@@ -1,0 +1,52 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+configurations {
+    all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+    unzipFile
+}
+
+group = '${groupId}'
+version = '${version}-SNAPSHOT'
+sourceCompatibility = '1.11'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation     'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation     ('${groupId}:${serviceId}-service-appservice:${version}-SNAPSHOT') {
+        changing = true
+    }
+    unzipFile          ('${groupId}:${serviceId}-service-controller:${version}-SNAPSHOT') {
+        changing = true
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task unzip(type: Copy) {
+    def file = configurations.unzipFile.files.find {
+        '${serviceId}-service-controller-${version}-SNAPSHOT.jar'
+    }
+    from zipTree(file)
+    into 'build/unzipFile'
+}
+
+task copy(type: Copy) {
+    from fileTree('build/unzipFile/BOOT-INF/classes')
+    into 'build/classes/java/main'
+}
+
+tasks.copy.dependsOn(tasks.unzip)
+tasks.compileJava.dependsOn(tasks.copy)
