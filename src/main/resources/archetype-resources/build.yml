@@ -1,0 +1,47 @@
+version: 1.0
+openAPIGeneratorVersion: 5.3.1
+javaBasePackage: ${package}
+openAPISpec: spec/openapi.yml
+properties:
+  GroupId: ${groupId}
+  ServiceId: ${serviceId}
+  SnapshotVersion: true
+modules:
+  - name: services/service-spring-appservice.yaml
+    template:
+      inputSpec: "{{openAPISpec}}"
+      generatorName: spring
+      outputDir: out/spring-appservice
+      additionalProperties:
+        configPackage: "{{javaBasePackage}}.controller.configuration"
+        modelPackage: "{{javaBasePackage}}.controller.model"
+        apiPackage: "{{javaBasePackage}}.controller.api"
+        invokerPackage: "{{javaBasePackage}}.controller.api"
+        groupId: "{{GroupId}}"
+        dateLibrary: java8
+        java8: true
+        library: spring-boot
+        artifactId: "{{ServiceId}}-service-appservice"
+        artifactVersion: "{{specVersion}}"
+        interfaceOnly: true
+        snapshotVersion: "{{SnapshotVersion}}"
+        useTags: true
+  - name: services/service-spring-controller.yaml
+    options: -Xmx1024M -DloggerPath=conf/log4j.properties -DsupportingFiles
+    template:
+      inputSpec: "{{openAPISpec}}"
+      generatorName: spring
+      outputDir: out/spring-controller
+      additionalProperties:
+        configPackage: "{{javaBasePackage}}.controller.configuration"
+        modelPackage: "{{javaBasePackage}}.controller.model"
+        apiPackage: "{{javaBasePackage}}.controller.api"
+        invokerPackage: "{{javaBasePackage}}.controller.api"
+        groupId: "{{GroupId}}"
+        dateLibrary: java8
+        java8: true
+        library: spring-boot
+        artifactId: "{{ServiceId}}-service-controller"
+        artifactVersion: "{{specVersion}}"
+        snapshotVersion: "{{SnapshotVersion}}"
+        useTags: true

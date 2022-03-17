@@ -14,10 +14,18 @@
         <fileSet filtered="true">
             <directory></directory>
             <includes>
-                <include>*</include>
+                <include>build.yml</include>
+                <include>pom.xml</include>
+                <include>README.md</include>
                 <include>spec/*</include>
                 <include>services/*</include>
                 <include>example/*</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory></directory>
+            <includes>
+                <include>openapi-generator-util-0.1.0-all.jar</include>
             </includes>
         </fileSet>
     </fileSets>

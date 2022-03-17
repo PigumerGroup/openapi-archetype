@@ -11,7 +11,9 @@
     <packaging>pom</packaging>
 
     <modules>
+        <!--
         <module>out/spring-appservice</module>
         <module>out/spring-controller</module>
+        -->
     </modules>
 </project>
